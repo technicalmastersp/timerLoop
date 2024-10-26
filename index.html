@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Loop | Technical Master SP</title>
+    <link rel="shortcut icon" href="static/assets/favicon/fevicon.png" type="png/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="input.css">
+
+    <!-- ***********************************************    CSS    ******************************************** -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DynaPuff:wght@400..700&family=Neucha&family=Permanent+Marker&family=Rubik+Wet+Paint&family=Satisfy&family=Shadows+Into+Light&display=swap');
+        *{
+            user-select: none !important;
+        }
+        nav ul{
+            font-family: "Caveat", "Permanent Marker", "DynaPuff", "Neucha", "Rubik Wet Paint", "Satisfy", "Shadows Into Light";
+            & li:hover{
+                color: #ff5900;
+                word-spacing: .05rem;
+                text-shadow: 4px 3px 5px #2727ff;
+                text-shadow: 7px 6px 5px #0000ff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="absolute">
+        <div>
+            <nav class="inline-block w-screen bg-zinc-100">
+                <ul class="px-5 py-2 flex justify-between font-extrabold tracking-widest md:text-lg xl:text-xl">
+                    <li><a href="index.html">Timer Loop</a></li>
+                    <li class="right-0"><a href="https://technicalmastersp.github.io/CODSOFT-INT/level-01/Task-02/index.html">Technical Master SP</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="bg-gray-100 flex items-center justify-center h-screen">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-[512px]:w-[18rem] max-w-md w-full">
+                <h1 class="text-2xl font-bold mb-4">Set a Timer</h1>
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Time (Minutes & Seconds):</label>
+                    <div class="flex">
+                        <input type="number" id="minuteInput" class="border border-gray-300 rounded p-2 w-1/2" placeholder="Minutes" min="0">
+                        <input type="number" id="secondInput" class="border border-gray-300 rounded p-2 w-1/2 ml-2" placeholder="Seconds" min="0" max="59">
+                    </div>
+                </div>
+                <button id="startButton" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Start Timer</button>
+                <button id="cancelButton" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 mt-2 hidden">Cancel Timer</button>
+                
+                <div class="mt-6">
+                    <h2 class="text-xl font-semibold">Countdown:</h2>
+                    <div id="countdownDisplay" class="text-2xl font-bold text-center mt-2">00:00</div>
+                </div>
+                <!-- <audio id="audio" src="static/assets/music/sp-ringtone.mp3" preload="auto"></audio> -->
+                <audio id="audio" src="static/assets/music/jaiShriRamJi.mp3" preload="auto"></audio>
+            </div>
+        </div>
+    </main>
+   <script src="static/scripts/index.js"></script>
+</body>
+</html>
